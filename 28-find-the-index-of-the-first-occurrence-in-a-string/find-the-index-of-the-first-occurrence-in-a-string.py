@@ -4,11 +4,13 @@ class Solution:
         if n == 1:
             if needle not in haystack:
                 return -1
-        
-        found = False
-        for index in range(len(haystack)):
+        k = len(haystack)
 
-            if index + n > len(haystack):
+
+        found = False
+        for index in range(k):
+
+            if index + n > k:
                 return -1
             strip = haystack[index:index+n]
             if needle == strip:
