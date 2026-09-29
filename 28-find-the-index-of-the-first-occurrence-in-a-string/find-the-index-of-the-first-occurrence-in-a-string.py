@@ -6,7 +6,7 @@ class Solution:
                 return -1
         
         found = False
-        for index,value in enumerate(haystack):
+        for index in range(len(haystack)):
 
             if index + n > len(haystack):
                 return -1
