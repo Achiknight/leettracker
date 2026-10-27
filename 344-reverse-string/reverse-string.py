@@ -4,13 +4,9 @@ class Solution:
         Do not return anything, modify s in-place instead.
         """
         left = 0
-        lenght = (len(s)-1)
-        for nums in s:
-            right = lenght - left
-            if left >= right:
-                break
-            temp = s[left]
-            s[left] = s[right]
-            s[right] = temp
+        right = len(s) - 1
+
+        while left < right:
+            s[left],s[right] = s[right],s[left]
             left += 1
-        
+            right -= 1
