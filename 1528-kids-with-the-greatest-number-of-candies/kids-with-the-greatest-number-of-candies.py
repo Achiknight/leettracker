@@ -3,10 +3,10 @@ class Solution:
         bol = []
         top = max(candies)
         cur = 0
-        for i in candies:
-            cur = extraCandies + i
+        for i in range(len(candies)):
+            cur = extraCandies + candies[i]
             if cur >= top:
-                bol.append(True)
+                candies[i] = True
             else:
-                bol.append(False)
-        return bol
+                candies[i] = False
+        return candies
